@@ -43,7 +43,7 @@ class App
 		}
 
 
-		const macVerifier = /([0-9,a-f]{2}\:){5}[0-9,a-f]{2}/;
+		const macVerifier = /([0-9,a-f,A-F]{2}\:){5}[0-9,a-f,A-F]{2}/;
 		if( !macVerifier.test( request.query.MAC ) )
 		{
 			answerWithError( 'MAC is invalid, expected format => 0f:0f:0f:0f:0f:0f' );
